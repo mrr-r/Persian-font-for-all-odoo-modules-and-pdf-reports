@@ -1,0 +1,19 @@
+
+ /*  Font  Start */
+   body { font-family: vazir;}
+   html { font-family: vazir;}
+ .pos{font-family: vazir;}
+ .pos .modal-dialog .popup {font-family: vazir;}
+ .ui-dialog, .modal-dialog{font-family: vazir;}
+ .pos textarea {font-family: vazir;}
+ /*  Font  End */
+ 
+.pos .loader {
+    font-family: vazir;
+}
+	
+	.pos button, .pos a.button {
+
+    font-family: vazir;
+}
+

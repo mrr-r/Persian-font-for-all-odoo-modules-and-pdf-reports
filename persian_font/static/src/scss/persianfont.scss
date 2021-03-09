@@ -1,0 +1,38 @@
+// ------------------------------------------------------------------
+// Vazir
+// ------------------------------------------------------------------
+$vazir-font-path: '../fonts/Vazir';
+
+@mixin vazir-font($type, $weight, $style) {
+    @font-face {
+        font-family: 'Vazir';
+        src: url('#{$vazir-font-path}/Vazir-#{$type}.eot');
+        src: url('#{$vazir-font-path}/Vazir-#{$type}.eot?#iefix') format('embedded-opentype'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.woff') format('woff'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.ttf') format('truetype'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.svg#Vazir') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+
+    @font-face {
+        font-family: 'vazir-#{$type}';
+        src: url('#{$vazir-font-path}/Vazir-#{$type}.eot');
+        src: url('#{$vazir-font-path}/Vazir-#{$type}.eot?#iefix') format('embedded-opentype'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.woff') format('woff'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.ttf') format('truetype'),
+             url('#{$vazir-font-path}/Vazir-#{$type}.svg#Vazir') format('svg');
+    }
+}
+
+@mixin vazir-font-pair($type, $weight) {
+    @include vazir-font('#{$type}', $weight, normal);
+    @include vazir-font('#{$type}Italic', $weight, italic);
+}
+
+
+
+@include vazir-font-pair('Light', 300);
+@include vazir-font-pair('Regular', 400);
+@include vazir-font-pair('Bold', 500);
+@include vazir-font-pair('Extrabold', 600);
